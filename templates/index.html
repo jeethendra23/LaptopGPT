@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaptopGPT - Your Laptop Expert</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+                <div class="brand-icon">💻</div>
+                <div>
+                    <h2>LaptopGPT</h2>
+                    <span>AI LAPTOP EXPERT</span>
+                </div>
+            </div>
+
+            <button id="newChatButton" class="new-chat-button" type="button">
+                <span>＋</span> New Chat
+            </button>
+
+            <div class="sidebar-section">
+                <p class="sidebar-heading">YOUR WORKSPACE</p>
+
+                <div class="sidebar-link active">
+                    <span>◈</span> AI Assistant
+                </div>
+
+                <div class="sidebar-link">
+                    <span>⌕</span> Laptop Expert
+                </div>
+            </div>
+
+            <div class="history-section">
+                <p class="sidebar-heading">RECENT CONVERSATIONS</p>
+
+                <div id="conversationHistory" class="history-list">
+                    <div class="history-empty">
+                        Your conversations will appear here.
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="online-indicator"></div>
+                <div>
+                    <strong>AI System Online</strong>
+                    <span>Powered by Groq AI</span>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- MAIN APPLICATION -->
+        <main class="main-panel">
+
+            <header class="header">
+
+                <div class="header-title">
+                    <span class="mobile-brand-icon">💻</span>
+                    <div>
+                        <h1>LaptopGPT</h1>
+                        <p>Your Personal Laptop Expert</p>
+                    </div>
+                </div>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    AI ONLINE
+                </div>
+
+            </header>
+
+            <section class="main-content">
+
+                <section class="welcome">
+                    <div class="welcome-tag">
+                        <span class="status-dot"></span>
+                        YOUR AI LAPTOP COMPANION
+                    </div>
+
+                    <h2>Power up your <span>knowledge.</span></h2>
+
+                    <p>
+                        Ask anything about laptops. Get expert advice,
+                        technical explanations and smart recommendations.
+                    </p>
+                </section>
+
+                <!-- SUGGESTIONS -->
+                <section class="suggestions">
+
+                    <button type="button"
+                        onclick="sendSuggestion('Recommend a laptop for students')">
+                        <span>🎓</span>
+                        <div>
+                            <strong>Student Laptops</strong>
+                            <small>Find your perfect study laptop</small>
+                        </div>
+                    </button>
+
+                    <button type="button"
+                        onclick="sendSuggestion('Recommend a gaming laptop')">
+                        <span>🎮</span>
+                        <div>
+                            <strong>Gaming Laptops</strong>
+                            <small>Explore gaming performance</small>
+                        </div>
+                    </button>
+
+                    <button type="button"
+                        onclick="sendSuggestion('Compare Intel and AMD processors')">
+                        <span>⚡</span>
+                        <div>
+                            <strong>Processor Comparison</strong>
+                            <small>Intel vs AMD explained</small>
+                        </div>
+                    </button>
+
+                    <button type="button"
+                        onclick="sendSuggestion('Help me troubleshoot my laptop')">
+                        <span>🔧</span>
+                        <div>
+                            <strong>Troubleshooting</strong>
+                            <small>Fix common laptop problems</small>
+                        </div>
+                    </button>
+
+                </section>
+
+                <!-- CHAT AREA -->
+                <section class="chat-box">
+
+                    <div id="chatMessages" class="chat-messages">
+
+                        <div class="message bot-message">
+                            <strong>LaptopGPT</strong>
+                            <p>
+                                Hello! 👋 Welcome to LaptopGPT.
+                                I'm your personal laptop expert.
+                                Ask me about laptop recommendations,
+                                processors, gaming, upgrades or troubleshooting.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="chat-input-area">
+
+                        <input
+                            type="text"
+                            id="userInput"
+                            placeholder="Ask anything about laptops..."
+                            autocomplete="off"
+                        >
+
+                        <div class="chat-buttons">
+
+                            <button id="clearButton" type="button">
+                                Clear Chat
+                            </button>
+
+                            <button id="sendButton" type="button">
+                                Send ➤
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <p class="input-note">
+                        LaptopGPT focuses exclusively on laptop-related questions.
+                    </p>
+
+                </section>
+
+            </section>
+
+            <footer>
+                <p>POWERED BY LAPTOPGPT AI <span>•</span> BUILT FOR LAPTOP ENTHUSIASTS</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="/static/app.js"></script>
+
+</body>
+</html>
